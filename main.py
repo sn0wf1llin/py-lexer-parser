@@ -19,14 +19,8 @@ def run(code=None, fname=None):
 
     if code is not None:
         lexres = lex_process(code)
-        print(lexres)
-        print("-"*33)
         parseres = parse_process(code)
-        print("="*33)
-        print(parseres)
-        print("-"*33)
 
-if __name__ == "__main__":
-    run(fname='code_to_analyze.py')
+        return lexres, parseres
 
-
+    return None, None

@@ -141,11 +141,10 @@ def p_fact(p):
         p[0] = Node('fact', [p[2], p[1], p[4]])
 
 def p_error(p):
-    print("PARSER: Unexpected token: <{}>".format(p))
+    print("\nPARSER: Unexpected token: <{}>".format(p))
 
 
 def parse_process(data):
-    print("Building syntax tree ... ")
     parser = yacc.yacc()
 
     return parser.parse(data)

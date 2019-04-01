@@ -12,7 +12,7 @@ t_ignore = ' \r\n\t\f'
 # error name in lowercase (!) because of a name convention
 def t_error(t):
     r''
-    print("\tIllegal character <{}>".format(t.value[0]))
+    print("\n\tIllegal character <{}>".format(t.value[0]))
     t.lexer.skip(1)
 
 

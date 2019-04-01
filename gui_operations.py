@@ -3,7 +3,7 @@ from main import run, read_file
 import tkinter
 from PIL import ImageTk, Image
 
-HELP_MSG = "(!!!) You need to load .py code via click on [ Browse ... ] \nbutton or write your own python code in the " \
+HELP_MSG = "(!!!) You need to load .py code via File -> Open or\n write your own python code in the " \
            "main TextBox to get results.\n\n\n[ Analyze ]    button -- Starts code analyzing process\nFile -> Open " \
            "-- Opens FileDialog window to help you \nselect a file and loads the .py code " \
            "file\n\nFile -> Exit ... close the main program window and exit\n\nHelp -> About ... shows program's About " \
