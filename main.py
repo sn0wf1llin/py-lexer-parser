@@ -1,5 +1,5 @@
 from lexer import lex_process
-from parser import parse_process
+from myparser import parse_process
 import os
 
 
