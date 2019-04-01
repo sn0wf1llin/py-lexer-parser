@@ -3,7 +3,7 @@ from gui_operations import analyze_code, show_about, browse_files, show_help
 
 
 root = Tk()
-root.geometry('1000x700')
+root.geometry('1100x700')
 root.title("Lexer & Parser for Python language")
 
 info_label = Label(root,
@@ -13,7 +13,7 @@ info_label = Label(root,
 info_label.place(x=10, y=10)
 
 code_field = Text(root,
-                  width=70,
+                  width=60,
                   height=20,
                   bg="white")
 code_field.place(x=10, y=40)
@@ -22,13 +22,13 @@ info_tokens_label = Label(root,
                          text="Tokens:",
                          font=("arial", 12, "bold"),
                          fg="black")
-info_tokens_label.place(x=10, y=370)
+info_tokens_label.place(x=10, y=380)
 
 tokens_field = Text(root,
-                  width=70,
+                  width=60,
                   height=17,
                   bg="white")
-tokens_field.place(x=10, y=400)
+tokens_field.place(x=10, y=410)
 
 info_syntax_tree_label = Label(root,
                          text="Syntax tree:",
@@ -37,10 +37,10 @@ info_syntax_tree_label = Label(root,
 info_syntax_tree_label.place(x=500, y=10)
 
 syntax_tree_field = Text(root,
-                  width=65,
-                  height=41,
+                  width=70,
+                  height=40,
                   bg="white")
-syntax_tree_field.place(x=520, y=40)
+syntax_tree_field.place(x=510, y=40)
 
 analyze_button = Button(root,
                         text="Analyze",
@@ -50,7 +50,7 @@ analyze_button = Button(root,
                         fg="black",
                         font=("arial", 10, "bold"),
                         command=lambda: analyze_code(code_field, tokens_field, syntax_tree_field, master=root))
-analyze_button.place(x=400, y=360)
+analyze_button.place(x=390, y=375)
 
 menubar = Menu(root)
 
@@ -66,6 +66,5 @@ helpmenu.add_command(label="Help", command=lambda: show_help(master=root))
 menubar.add_cascade(label="Help", menu=helpmenu)
 
 root.config(menu=menubar)
-
 
 root.mainloop()
